@@ -28,7 +28,7 @@ async def google(request):
     chrome_bin = os.environ.get('GOOGLE_CHROME_SHIM', None)
     opts = ChromeOptions()
     opts.binary_location = chrome_bin
-    driver = webdriver.Chrome('/app/.chromedriver/bin/chromedriver', opts)
+    driver = webdriver.Chrome(executable_path='/app/.chromedriver/bin/chromedriver', chrome_options=opts)
     driver.get('http://www.google.com')
 
     # Search for the phrase or key words
