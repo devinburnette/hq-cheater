@@ -1,0 +1,56 @@
+.text-overflow {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 500px;
+}
+
+body {
+	background: black;
+}
+
+h1 {
+  margin-top: 50px;
+  color: white;
+  text-align: center;
+}
+
+.btn {
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.container {
+	text-align: center;
+	color: #1ED760;
+}
+
+.answer {
+  margin: 20px;
+}
+
+.progress {
+  border-radius: 15px 50px 30px 5px;
+}
+
+.progress-bar {
+  background-color: green;
+  border-radius: 15px 50px 30px 5px;
+}
+
+#searchbox {
+  color: black;
+  width: 600px;
+  height: 50px;
+  font-size: 30px;
+}
+
+#search {
+  text-align: center;
+  margin: 25px;
+}
+
+#searchresults {
+  text-align: center;
+  padding: 100px;
+}
