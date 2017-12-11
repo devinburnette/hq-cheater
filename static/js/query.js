@@ -9,8 +9,7 @@ function search() {
     console.log(phrase);
     console.log(choices);
     $.ajax({
-        //url: `https://hq-cheater.herokuapp.com/google?search=${phrase}&choices=${choices}`,
-      url: `http://localhost:9000/google?search=${phrase}&choices=${choices}`,
+        url: `/google?search=${phrase}&choices=${choices}`,
         success: function(response) {
           console.log(response);
 					var res = $.parseJSON(response);
