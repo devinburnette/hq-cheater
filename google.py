@@ -2,7 +2,7 @@ import re
 import json
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from bottle import route, run, request, response, static_file
+from bottle import route, run, request, static_file
 
 @route('/')
 def index():
