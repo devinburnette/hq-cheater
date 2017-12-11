@@ -1,3 +1,2 @@
 sanic
 selenium
-chromedriver
