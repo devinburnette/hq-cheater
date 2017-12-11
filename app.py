@@ -24,7 +24,8 @@ async def google(request):
 
     # Start Google
     #driver = webdriver.Chrome('/usr/local/bin/chromedriver')
-    driver = webdriver.Chrome('/app/.heroku/python/chromedriver-Linux64')
+    #driver = webdriver.Chrome('/app/.heroku/python/chromedriver-Linux64')
+    driver = webdriver.Firefox()
     driver.get('http://www.google.com')
 
     # Search for the phrase or key words
