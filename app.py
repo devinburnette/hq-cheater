@@ -1,5 +1,6 @@
 import re
 import json
+from sys import argv
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from bottle import route, run, request, static_file
@@ -44,4 +45,4 @@ def google():
 		results[choice] += 1
     return json.dumps(results)
 
-run(host='0.0.0.0', port=443)
+run(host='0.0.0.0', port=argv[1])
