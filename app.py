@@ -44,4 +44,4 @@ def google():
 		results[choice] += 1
     return json.dumps(results)
 
-run(host='0.0.0.0', port=80)
+run(host='0.0.0.0', port=443)
