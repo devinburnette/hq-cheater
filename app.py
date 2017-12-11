@@ -23,7 +23,8 @@ async def google(request):
             sanitized.remove(word)
 
     # Start Google
-    driver = webdriver.Chrome('/usr/local/bin/chromedriver')
+    #driver = webdriver.Chrome('/usr/local/bin/chromedriver')
+    driver = webdriver.Chrome('/app/.heroku/python/chromedriver-Linux64')
     driver.get('http://www.google.com')
 
     # Search for the phrase or key words
