@@ -1,8 +1,10 @@
 import re
+import os
 import json as jsn
 from sys import argv
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options as ChromeOptions
 from sanic import Sanic
 from sanic.response import text, json
 app = Sanic(__name__)
@@ -23,7 +25,10 @@ async def google(request):
             sanitized.remove(word)
 
     # Start Google
-    driver = webdriver.Chrome('/app/.chromedriver/bin/chromedriver')
+    chrome_bin = os.environ.get('GOOGLE_CHROME_SHIM', None)
+    opts = ChromeOptions()
+    opts.binary_location = chrome_bin
+    driver = webdriver.Chrome('/app/.chromedriver/bin/chromedriver', opts)
     driver.get('http://www.google.com')
 
     # Search for the phrase or key words
