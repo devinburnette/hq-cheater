@@ -27,6 +27,7 @@ async def google(request):
     # Start Google
     chrome_bin = os.environ.get('GOOGLE_CHROME_SHIM', None)
     opts = ChromeOptions()
+    opts.add_argument('--headless')
     opts.binary_location = chrome_bin
     driver = webdriver.Chrome(executable_path='/app/.chromedriver/bin/chromedriver', chrome_options=opts)
     driver.get('http://www.google.com')
